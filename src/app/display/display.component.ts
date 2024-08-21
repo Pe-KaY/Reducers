@@ -19,7 +19,7 @@ export class DisplayComponent {
 
   initialStatenum!: number;
 
-  constructor(private store: Store<{ count: number }>) {}
+  constructor(public store: Store<{ count: number }>) {}
 
   ngOnInit() {
     this.count$ = this.store.select(getCurrentCount);
