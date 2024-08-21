@@ -1,6 +1,8 @@
 .container {
   height: 100vh;
   place-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
 }
 
 .wrapper {
@@ -10,35 +12,39 @@
   margin: auto;
   padding: 2rem 1rem;
   place-content: center;
-  background-color: aqua;
-  color: orangered;
+  background-color: #008f7a;
+  color: black;
 }
 
-h1{
+h1 {
   text-align: center;
 }
-span{
-    min-height: 3rem;
-    padding: 1rem;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem auto;
-    font-size: 2rem;
+span {
+  min-height: 3rem;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  font-size: 2rem;
 }
 
-
-input{
-    padding: 10px 20px;
-    font-size: 2rem;
-    width: 30%;
-    text-align: center;
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 10px 20px;
+  font-size: 2rem;
+  width: 30%;
+  text-align: center;
+}
+input:focus {
+  outline: none;
 }
 
-
-@media (max-width:502px) {
-  .wrapper{
+@media (max-width: 502px) {
+  .wrapper {
     width: 100%;
     min-height: 100vh;
     border-radius: 0;

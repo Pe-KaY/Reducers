@@ -6,6 +6,13 @@
   padding: 0;
 }
 
-html{
-  color-scheme: light dark;
+
+
+body {
+  height: 100vh;
+  background-image: url('./app/assets/letsee.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

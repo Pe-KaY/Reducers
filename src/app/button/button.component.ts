@@ -16,16 +16,16 @@ export class ButtonComponent {
 
   colors():void{
     if(this.name === 'Increase')
-      this.backgroundColor = 'green';
+      this.backgroundColor = '#96c93c';
     else if(this.name === 'Decrease'){
-      this.backgroundColor = 'yellow';
+      this.backgroundColor = '#d6c347';
     }
     else{
-      this.backgroundColor = 'red';
+      this.backgroundColor = '#fc5a03';
     }
   }
 
-  ngOninit(){
+  ngOnInit(){
     this.colors();
   }
 

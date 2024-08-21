@@ -7,7 +7,6 @@ import { increment, decrement, reset, initialValue} from '../store/counter.actio
 import { Store } from '@ngrx/store';
 import { ButtonComponent } from '../button/button.component';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
-import { Observable } from 'rxjs';
 import { getCurrentCount } from '../selector/counters.selector';
 import { CommonModule } from '@angular/common';
 
