@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="wrapper">
+    <h1>COUNT: {{ count$ | async }}</h1>
+    <span> Initial value: <input (keyup)="setInitialNum($event)" type="number"/> </span>
+    <span>
+      <app-button (click)="increment()" [name]="'Increase'"></app-button>
+      <app-button (click)="decrement()" [name]="'Decrease'"></app-button>
+      <app-button (click)="reset()" [name]="'Reset'"></app-button>
+    </span>
+  </div>
+</div>
