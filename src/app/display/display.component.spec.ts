@@ -12,7 +12,7 @@ import {
 import { Store } from '@ngrx/store';
 import { ButtonComponent } from '../button/button.component';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
-import { getCurrentCount } from '../selector/selectors.selector';
+// import { getCurrentCount } from '../selector/selectors.selector';
 import { CommonModule } from '@angular/common';
 
 describe('DisplayComponent', () => {
@@ -27,7 +27,7 @@ describe('DisplayComponent', () => {
       providers: [
         provideMockStore({
           selectors: [
-            { selector: getCurrentCount, value: 0 }, // Mocked selector value
+            { selector: "count", value: 0 }, // Mocked selector value
           ],
         }),
       ],

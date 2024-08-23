@@ -13,22 +13,26 @@ const initialState = isBrowser
   ? Number(window.localStorage.getItem('count')) || 0
   : initialStateBackup;
 
+let history: number[] = [];
 
 const _counterReducer = createReducer(
   initialState,
   on(increment, (state) => {
     const current = state + 1;
+    history = [...history, state]
     localStorage.setItem('count', current.toString());
     return state + 1;
   }),
   on(decrement, (state) => {
     if(state === 0) return state
     const current = state - 1;
+    history = [...history, state]
     localStorage.setItem('count', current.toString());
     return state - 1;
   }),
   on(reset, (_state) => {
     localStorage.setItem('count', initialStateBackup.toString());
+    history = []
     return initialStateBackup;
   }),
   on(initialValue, (_state, { num }) => {
