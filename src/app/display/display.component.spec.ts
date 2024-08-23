@@ -3,13 +3,17 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DisplayComponent } from './display.component';
 
 // letsee
-import { increment, decrement, reset, initialValue} from '../store/counter.actions';
+import {
+  increment,
+  decrement,
+  reset,
+  initialValue,
+} from '../store/counter.actions';
 import { Store } from '@ngrx/store';
 import { ButtonComponent } from '../button/button.component';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
-import { getCurrentCount } from '../selector/counters.selector';
+import { getCurrentCount } from '../selector/selectors.selector';
 import { CommonModule } from '@angular/common';
-
 
 describe('DisplayComponent', () => {
   let component: DisplayComponent;
@@ -23,10 +27,10 @@ describe('DisplayComponent', () => {
       providers: [
         provideMockStore({
           selectors: [
-            { selector: getCurrentCount, value: 0 } // Mocked selector value
-          ]
-        })
-      ]
+            { selector: getCurrentCount, value: 0 }, // Mocked selector value
+          ],
+        }),
+      ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(DisplayComponent);

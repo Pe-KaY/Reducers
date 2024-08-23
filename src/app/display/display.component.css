@@ -29,7 +29,13 @@ span {
   margin: 2rem auto;
   font-size: 2rem;
 }
-
+.hmm{
+  border: 2px solid black;
+  width: 10rem;
+  height: 3rem;
+  padding: 2rem;
+  overflow: scroll;
+}
 input {
   background-color: transparent;
   border: none;

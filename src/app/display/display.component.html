@@ -1,11 +1,13 @@
 <div class="container">
   <div class="wrapper">
+    <h1>Reducers and Immutability</h1>
     <h1>COUNT: {{ count$ | async }}</h1>
-    <span> Initial value: <input (keyup)="setInitialNum($event)" type="number"/> </span>
+    <span> Count value: <input (keyup)="setInitialNum($event)" type="number"/> </span>
     <span>
       <app-button (click)="increment()" [name]="'Increase'"></app-button>
       <app-button (click)="decrement()" [name]="'Decrease'"></app-button>
       <app-button (click)="reset()" [name]="'Reset'"></app-button>
     </span>
+    <h1>Count History</h1><span class="hmm"> {{ countHistory$ | async }}</span>
   </div>
 </div>

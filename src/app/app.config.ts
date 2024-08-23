@@ -5,8 +5,9 @@ import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideStore } from '@ngrx/store';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import { counterReducer } from './store/counter.reducer';
+import { reducers } from './store/feature.reducer';
+
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(), provideStore({count: counterReducer}), provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(), provideStore(reducers), provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),]
 };

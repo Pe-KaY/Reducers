@@ -22,6 +22,7 @@ const _counterReducer = createReducer(
     return state + 1;
   }),
   on(decrement, (state) => {
+    if(state === 0) return state
     const current = state - 1;
     localStorage.setItem('count', current.toString());
     return state - 1;
